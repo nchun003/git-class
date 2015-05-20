@@ -1,5 +1,5 @@
 ### Introduction
-gitlearn_doc is a copy of gitlearn that is documented in a fashion similar to "***** for Dummies" guide.
+Within this folder, you will find that gitlearn_doc is a copy of gitlearn that is documented in a fashion similar to "***** for Dummies" guide.
 
 ### Install  
 
