@@ -10,4 +10,4 @@ giturl = https://github.com/<github-username>/gitlearn.git
 github = <github-username>
 ```
 
-If you have other accounts for particularly helpful Q&A websites, such as [Stack Overflow](stackoverflow.com), feel free to add them.
+If you have other accounts for particularly helpful Q&A websites, such as [Stack Overflow](http://stackoverflow.com), feel free to add them.
