@@ -4,8 +4,3 @@ It includes, but is not limited to, registering for a course, grading and grade 
 
 ### Install
 `$ git clone http://github.com/aso001/gitlearn_doc`
-
-### Instructor's Tutorial
-
-### Student's Tutorial
-
