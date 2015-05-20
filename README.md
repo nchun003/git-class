@@ -1,10 +1,11 @@
 ### Introduction
-Within this folder, you will find that gitlearn_doc is a copy of gitlearn that is documented in a fashion similar to "***** for Dummies" guide.
+*gitlearn_doc* is a documented guide to using the open software *gitlearn* for new users, both instructors and students.
+It includes, but is not limited to, registering for a course, grading and grade checking, and utilizing the scripts here.
 
-### Install  
+### Install
 `$ git clone http://github.com/aso001/gitlearn_doc`
 
 ### Instructor's Tutorial
 
-### Student's Tutorial  
+### Student's Tutorial
 
