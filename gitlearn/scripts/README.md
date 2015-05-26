@@ -21,7 +21,7 @@ If you have any executable files in your directory it will get checked(which you
 
 ## register.sh
 This is probably the first script you will be running, in order to register for the class.
-In order to run:
+You want to run:
 ```
 $ register.sh
 ```
