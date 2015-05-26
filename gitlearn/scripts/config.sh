@@ -12,7 +12,7 @@ set -a
 # configuration (can be modified)
 
 # the github project name
-classname="ucr-cs100"
+classname="gitlearn_doc"
 
 # tmp folder for all student repos
 tmpdir="$HOME/.gitlearn/$classname"
