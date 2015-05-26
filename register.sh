@@ -1,36 +1,26 @@
 #!/bin/bash
 
 function register_i {
-    echo "Welcome, instructor!"
-    echo "Enter your name:"
-    read INAME
-    sleep 1
-    echo "Enter your github user:"
-    read IUSRGIT
-    echo "name = $INAME" > ./people/instructors/$IUSRGIT
-    echo "github = $IUSRGIT" >> ./people/instructors/$IUSRGIT
-    sleep 2
-    echo "Thank you. You are now registered!"
+    RPATH="./people/instructors/$2"
+    echo "name = $1" > $RPATH
+    echo "giturl = https://github.com/$2/gitlearn_doc.git" >> $RPATH
+    echo "" >> $RPATH
+    echo "github = $2" >> $RPATH
 }
 
 function register_s {
-    echo "Welcome, student!"
-    echo "Enter your name:"
-    read SNAME
-    sleep 1
-    echo "Enter your github user:"
-    read SUSRGIT
-    echo "name = $SNAME" > ./people/students/$SUSRGIT
-    echo "github = $SUSRGIT" >> ./people/students/$SUSRGIT
-    sleep 2
-    echo "Thank you. You are now registered!"
+    RPATH="./people/students/$2"
+    echo "name = $1" > $RPATH
+    echo "giturl = https://github.com/$2/gitlearn_doc.git" >> $RPATH
+    echo "" >> $RPATH
+    echo "github = $2" >> $RPATH
 }
 
 clear
 echo "Welcome to gitlearn_doc!"
 sleep 2
 
-# get user status
+# get user status, name, and github username
 STATUS=0
 echo "Select an option:"
 echo "1. Instructor"
@@ -41,11 +31,19 @@ while [ $STATUS -ne 1 ] && [ $STATUS -ne 2 ]; do
         echo "Invalid Option"
     fi
 done
+sleep 1
+echo "Enter your name:"
+read NAME
+sleep 1
+echo "Enter your github username:"
+read USRGIT
+sleep 2
 
 # register
-sleep 2
 if [ $STATUS -eq 1 ]; then
-    register_i
+    register_i "$NAME" "$USRGIT"
 else
-    register_s
+    register_s "$NAME" "$USRGIT"
 fi
+
+echo "Thank you. You are now registered!"
