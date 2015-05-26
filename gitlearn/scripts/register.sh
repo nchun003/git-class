@@ -19,7 +19,7 @@ function register_i {
 }
 
 function register_s {
-    RPATH="studentinfo/$2"
+    RPATH="$studentinfo/$2"
     echo "name = $1" > $RPATH
     echo "giturl = https://github.com/$2/gitlearn_doc.git" >> $RPATH
     echo "" >> $RPATH
