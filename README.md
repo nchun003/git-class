@@ -8,10 +8,10 @@ It includes, but is not limited to, registering for a course, grading and grade 
 
 Installing is simple. Just clone the repo and add the scripts folder to your PATH using the following commands:
 
-Original version: $ git clone https://github.com/mikeizbicki/gitlearn  
-Documented version: $ git clone https://github.com/aso001/gitlearn_doc    
-$ export PATH=$(pwd)/gitlearn/scripts:$PATH  
+Original version: `$ git clone https://github.com/mikeizbicki/gitlearn`  
+Documented version: `$ git clone https://github.com/aso001/gitlearn_doc`    
+`$ export PATH=$(pwd)/gitlearn/scripts:$PATH`  
 In order for your PATH to remain across sessions you need to update your ~/.bashrc (or similar):  
 
-$ echo "export PATH=$(pwd)/gitlearn/scripts:"'$PATH' >> $HOME/.bashrc  
+`$ echo "export PATH=$(pwd)/gitlearn/scripts:"'$PATH' >> $HOME/.bashrc`  
 ### Bugs/Issues
