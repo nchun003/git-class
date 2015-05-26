@@ -6,6 +6,8 @@ function register_i {
     echo "giturl = https://github.com/$2/gitlearn_doc.git" >> $RPATH
     echo "" >> $RPATH
     echo "github = $2" >> $RPATH
+    git add "$RPATH"
+    git commit -q -m "automatically generated file $2"
 }
 
 function register_s {
@@ -14,6 +16,8 @@ function register_s {
     echo "giturl = https://github.com/$2/gitlearn_doc.git" >> $RPATH
     echo "" >> $RPATH
     echo "github = $2" >> $RPATH
+    git add "$RPATH"
+    git commit -q -m "automatically generated file $2"
 }
 
 clear
@@ -37,13 +41,18 @@ read NAME
 sleep 1
 echo "Enter your github username:"
 read USRGIT
-sleep 2
 
 # register
+echo "Registering $USRGIT to gitlearn..."
 if [ $STATUS -eq 1 ]; then
     register_i "$NAME" "$USRGIT"
 else
     register_s "$NAME" "$USRGIT"
 fi
+sleep 2
+
+# push
+git push origin master
+sleep 2
 
 echo "Thank you. You are now registered!"
