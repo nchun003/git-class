@@ -11,15 +11,13 @@ set -a
 #######################################
 # configuration (can be modified)
 
-# the github project name - this name can be changed to suit the class name.  
+# the github project name
 classname="gitlearn_doc"
 
-# tmp folder for all student repos  
+# tmp folder for all student repos
 tmpdir="$HOME/.gitlearn/$classname"
 
-# branch of student git repository that stores the grades  
-# - instructor will store student grades into this branch  
-# - students will be able to check their grades from this branch
+# branch of student git repository that stores the grades
 gradesbranch="grades"
 
 # folder containing instructor pgp keys
