@@ -1,7 +1,33 @@
 #!/bin/bash
 
+function register_i {
+    echo "Welcome, instructor!"
+    echo "Enter your name:"
+    read INAME
+    sleep 1
+    echo "Enter your github user:"
+    read IUSRGIT
+    echo "name = $INAME" > ./people/instructors/$IUSRGIT
+    echo "github = $IUSRGIT" >> ./people/instructors/$IUSRGIT
+    sleep 2
+    echo "Thank you. You are now registered!"
+}
+
+function register_s {
+    echo "Welcome, student!"
+    echo "Enter your name:"
+    read SNAME
+    sleep 1
+    echo "Enter your github user:"
+    read SUSRGIT
+    echo "name = $SNAME" > ./people/students/$SUSRGIT
+    echo "github = $SUSRGIT" >> ./people/students/$SUSRGIT
+    sleep 2
+    echo "Thank you. You are now registered!"
+}
+
 clear
-echo "Welcome to gitlearn!"
+echo "Welcome to gitlearn_doc!"
 sleep 2
 
 # get user status
@@ -16,11 +42,10 @@ while [ $STATUS -ne 1 ] && [ $STATUS -ne 2 ]; do
     fi
 done
 
-# begin
+# register
+sleep 2
 if [ $STATUS -eq 1 ]; then
-    # do instructor stuff
-    echo "You are an instructor"
+    register_i
 else
-    # do student stuff
-    echo "You are a student"
+    register_s
 fi
