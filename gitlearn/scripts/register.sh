@@ -1,7 +1,15 @@
 #!/bin/bash
 
+#
+# This script is used to add a new people associated to the class.
+# This is assumed that the user has already have github setup
+#
+
+scriptdir=`dirname "$0"`
+source "$scriptdir/config.sh"
+
 function register_i {
-    RPATH="./people/instructors/$2"
+    RPATH="$instructorinfo/$2"
     echo "name = $1" > $RPATH
     echo "giturl = https://github.com/$2/gitlearn_doc.git" >> $RPATH
     echo "" >> $RPATH
@@ -11,7 +19,7 @@ function register_i {
 }
 
 function register_s {
-    RPATH="./people/students/$2"
+    RPATH="studentinfo/$2"
     echo "name = $1" > $RPATH
     echo "giturl = https://github.com/$2/gitlearn_doc.git" >> $RPATH
     echo "" >> $RPATH
